@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dc5f00f-2fb5-4f28-bff4-0eedf3fe026b" name="Changes" comment="" />
+    <list default="true" id="796ea01d-8f8c-4c77-a31b-508301e6f061" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +17,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="25MMtA0buo9Em7j0znDVY7NueBt" />
+  <component name="ProjectId" id="24fqa3831yhWv1Fo3J0rziXzpxl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,15 +28,39 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ObjectExercise1" />
     <property name="settings.editor.selected.configurable" value="consents" />
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Array" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2dc5f00f-2fb5-4f28-bff4-0eedf3fe026b" name="Changes" comment="" />
-      <created>1645332716474</created>
+      <changelist id="796ea01d-8f8c-4c77-a31b-508301e6f061" name="Changes" comment="" />
+      <created>1644032051068</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1645332716474</updated>
+      <updated>1644032051068</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

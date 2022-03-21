@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a4bfdab2-e56a-463a-8b43-1c296c85880d" name="Changes" comment="Add Challenge1">
+      <change beforePath="$PROJECT_DIR$/../../Array/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Array/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Array/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Array/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Array/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Array/Array.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Array/out/production/Array/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Array/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/Challenge1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/out/production/Challenge1/Contact.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/out/production/Challenge1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/out/production/Challenge1/Messages.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/src/Contact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Challenge1/src/Messages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/Looping.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/TugasLooping.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/out/production/TugasLooping/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Looping/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mencoba/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mencoba/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mencoba/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mencoba/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mencoba/Mencoba.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mencoba/out/production/Mencoba/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mencoba/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/ObjectExcercise1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/ObjectExcersice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/6.8/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/6.8/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/configuration-cache/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/out/production/ObjectExcersice/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/6.8/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/6.8/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/configuration-cache/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise1/src/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/ObjectExercise2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/out/production/ObjectExercise2/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/out/production/ObjectExercise2/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/out/production/ObjectExercise2/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/out/production/ObjectExercise2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/src/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/src/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/src/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ObjectExercise2/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/out/production/percobaanSatu/com/belajar/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/percobaanSatu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../percobaanSatu/src/com/belajar/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../printf/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../printf/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../printf/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../printf/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../printf/printf.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../printf/src/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25dQrUfNj2xchHK7GciSFH6Z8Um" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Challenge1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4bfdab2-e56a-463a-8b43-1c296c85880d" name="Changes" comment="" />
+      <created>1645854688151</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645854688151</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Add Challenge1">
+      <created>1645863804708</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645863804708</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Challenge1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Challenge1" />
+  </component>
+</project>

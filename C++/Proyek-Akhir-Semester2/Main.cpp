@@ -133,7 +133,7 @@ int main()
 						{
 							cout << "| " << setfill(' ') << setw(15) << tempGame[i].kode << "| " << setfill(' ') << setw(22) << replaceUnderscore(tempGame[i].nama);
 							cout << "| " << setfill(' ') << setw(18) << tempGame[i].genre << "| " << setfill(' ') << setw(18) << tempGame[i].developer;
-							cout << "| " << setfill(' ') << setw(18) << tempGame[i].tanggalRilis << "| " << setfill(' ') << setw(17) << tempGame[i].harga;
+							cout << "| " << setfill(' ') << setw(18) << tempGame[i].tanggalRilis << "| " << setfill(' ') << setw(17) << tempGame[i].harga << endl;
 						}
 						cout << setfill('-') << setw(115) << "-" << endl;
 
@@ -224,7 +224,7 @@ int main()
 							{
 								cout << "| " << setfill(' ') << setw(15) << tempGame[i].kode << "| " << setfill(' ') << setw(22) << replaceUnderscore(tempGame[i].nama);
 								cout << "| " << setfill(' ') << setw(18) << tempGame[i].genre << "| " << setfill(' ') << setw(18) << tempGame[i].developer;
-								cout << "| " << setfill(' ') << setw(18) << tempGame[i].tanggalRilis << "| " << setfill(' ') << setw(17) << tempGame[i].harga;
+								cout << "| " << setfill(' ') << setw(18) << tempGame[i].tanggalRilis << "| " << setfill(' ') << setw(17) << tempGame[i].harga << endl;
 							}
 							cout << setfill('-') << setw(115) << "-" << endl;
 							cout << "Beli Game?(y/n) : ";
@@ -269,7 +269,7 @@ int main()
 							{
 								cout << "| " << setfill(' ') << setw(15) << tempGame[i].kode << "| " << setfill(' ') << setw(22) << replaceUnderscore(tempGame[i].nama);
 								cout << "| " << setfill(' ') << setw(18) << tempGame[i].genre << "| " << setfill(' ') << setw(18) << tempGame[i].developer;
-								cout << "| " << setfill(' ') << setw(18) << tempGame[i].tanggalRilis << "| " << setfill(' ') << setw(17) << tempGame[i].harga;
+								cout << "| " << setfill(' ') << setw(18) << tempGame[i].tanggalRilis << "| " << setfill(' ') << setw(17) << tempGame[i].harga << endl;
 							}
 							cout << setfill('-') << setw(115) << "-" << endl;
 							cout << "Beli Game?(y/n) : ";
@@ -394,7 +394,8 @@ int main()
 void tambahSaldo(dataAkun akun, string username)
 {
 	int saldo;
-	cout << "Masukkan Saldo : ";
+	cout << "Silakan Masukan Jumlah Saldo Yang Ingin Ditambahkan" << endl;
+	cout << "Jumlah Saldo : ";
 	cin >> saldo;
 	string namaFile1 = username + ".txt";
 	ofstream ofs(namaFile1);
@@ -403,6 +404,7 @@ void tambahSaldo(dataAkun akun, string username)
 		ofs << akun.username << " " << akun.password << " " << akun.saldo + saldo << endl;
 		ofs.close();
 	}
+	cout << "\nTop Up Berhasil!" << endl;
 }
 string replaceSpasi(string str)
 {
@@ -503,7 +505,7 @@ void outputGame(dataGame data[], int &jumlahGame)
 	{
 		cout << "| " << setfill(' ') << setw(15) << data[i].kode << "| " << setfill(' ') << setw(22) << replaceUnderscore(data[i].nama);
 		cout << "| " << setfill(' ') << setw(18) << data[i].genre << "| " << setfill(' ') << setw(18) << data[i].developer;
-		cout << "| " << setfill(' ') << setw(18) << data[i].tanggalRilis << "| " << setfill(' ') << setw(17) << data[i].harga;
+		cout << "| " << setfill(' ') << setw(18) << data[i].tanggalRilis << "| " << setfill(' ') << setw(17) << data[i].harga << endl;
 	}
 	cout << setfill('-') << setw(115) << "-" << endl;
 }
@@ -535,7 +537,7 @@ void registerAkun(dataAkun data, int &jumlahAkun, string username, string passwo
 }
 void beliGame(dataGame datagame[], string username, int &jumlahBeli, int &nomorakun, dataAkun akun)
 {
-	string belilain,topup;
+	string belilain, topup;
 	int kodegame;
 	do
 	{
@@ -588,8 +590,8 @@ void beliGame(dataGame datagame[], string username, int &jumlahBeli, int &nomora
 				if (ofs2.is_open())
 				{
 					ofs2 << akun.username << " "
-						<< akun.password << " "
-						<< akun.saldo - datagame[i].harga << endl;
+						 << akun.password << " "
+						 << akun.saldo - datagame[i].harga << endl;
 					ofs2.close();
 				}
 				cout << "Lakukan Pembelian lain?(y/n) : ";
@@ -609,7 +611,8 @@ void beliGame(dataGame datagame[], string username, int &jumlahBeli, int &nomora
 				cout << "\nSaldo Anda Tidak Cukup" << endl;
 				cout << "Apakah Anda Ingin Top Up Saldo?(y/n) : ";
 				cin >> topup;
-				if(topup == "y"){
+				if (topup == "y")
+				{
 					belilain = "n";
 					system("cls");
 					tambahSaldo(akun, username);
@@ -660,11 +663,11 @@ void libraryGame(dataGame game[], string username, int i)
 			{
 				cout << "| " << setfill(' ') << setw(15) << game[j].kode << "| " << setfill(' ') << setw(22) << replaceUnderscore(game[j].nama);
 				cout << "| " << setfill(' ') << setw(18) << game[j].genre << "| " << setfill(' ') << setw(18) << game[j].developer;
-				cout << "| " << setfill(' ') << setw(18) << game[j].tanggalRilis << "| " << setfill(' ') << setw(17) << game[j].harga;
+				cout << "| " << setfill(' ') << setw(18) << game[j].tanggalRilis << "| " << setfill(' ') << setw(17) << game[j].harga << endl;
 			}
 			cout << setfill('-') << setw(115) << "-" << endl;
 		}
 	}
 	else
-			cout << "Anda belum memiliki game" << endl;
+		cout << "Anda belum memiliki game" << endl;
 }

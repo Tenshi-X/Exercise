@@ -24,7 +24,7 @@ string replaceUnderscore(string str);
 void inputGame(dataGame data[], int &jumlahGame);
 void outputGame(dataGame data[], int &jumlahGame);
 void registerAkun(dataAkun data, int &jumlahAkun, string username, string password);
-void beliGame(dataGame datagame[], string username, int &jumlahBeli, int &nomorakun, dataAkun akun);
+void beliGame(dataGame datagame[], dataGame game[], string username, int &jumlahBeli, int &nomorakun, dataAkun akun);
 void tambahSaldo(dataAkun dataakun, string username);
 void libraryGame(dataGame game[], string username, int i);
 
@@ -34,6 +34,7 @@ int main()
 	int pilih1, pilih2, pilih3, pilih4, banyakMasukan = 0, banyakAkun = 0, banyakBeli = 0, nomorAkun = 0;
 	dataGame game[100];
 	dataGame tempGame[100];
+	dataGame gameSaya[100];
 	dataAkun akun;
 
 	do
@@ -151,23 +152,14 @@ int main()
 							string cariNama;
 							cout << "Masukkan nama game : ";
 							getline(cin, cariNama);
-							ifstream ifs("dataGame.txt");
 							bool pencarian = false;
-
-							if (ifs.is_open())
+							for (int i = 0; i < jumlahGame; i++)
 							{
-								while (!ifs.eof() && !pencarian)
+								if (replaceSpasi(cariNama) == replaceSpasi(tempGame[i].nama))
 								{
-									if (replaceSpasi(cariNama) == replaceSpasi(tempGame[i].nama))
-									{
-										pencarian = true;
-									}
-									else
-									{
-										i++;
-									}
+									pencarian = true;
+									break;
 								}
-								ifs.close();
 							}
 							if (pencarian)
 							{
@@ -177,21 +169,21 @@ int main()
 									 << "Developer\t: " << tempGame[i].developer << endl
 									 << "Tanggal Rilis\t: " << tempGame[i].tanggalRilis << endl
 									 << "Harga\t\t: " << tempGame[i].harga << endl;
+								cout << "Beli Game?(y/n) : ";
+								cin >> beligame;
+								if (beligame == "y")
+								{
+									banyakBeli++;
+									beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun);
+								}
+								else
+								{
+									cout << "Terima Kasih" << endl;
+								}
 							}
 							else
 							{
 								cout << "Nama tidak ditemukan" << endl;
-							}
-							cout << "Beli Game?(y/n) : ";
-							cin >> beligame;
-							if (beligame == "y")
-							{
-								banyakBeli++;
-								beliGame(tempGame, username, banyakBeli, nomorAkun, akun);
-							}
-							else
-							{
-								cout << "Terima Kasih" << endl;
 							}
 						}
 						else if (pilih4 == 2)
@@ -232,7 +224,7 @@ int main()
 							if (beligame == "y")
 							{
 								banyakBeli++;
-								beliGame(tempGame, username, banyakBeli, nomorAkun, akun);
+								beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun);
 							}
 							else
 							{
@@ -277,7 +269,7 @@ int main()
 							if (beligame == "y")
 							{
 								banyakBeli++;
-								beliGame(tempGame, username, banyakBeli, nomorAkun, akun);
+								beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun);
 							}
 							else
 							{
@@ -287,7 +279,7 @@ int main()
 						else if (pilih4 == 4)
 						{
 							banyakBeli++;
-							beliGame(tempGame, username, banyakBeli, nomorAkun, akun);
+							beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun);
 						}
 						else
 						{
@@ -535,13 +527,13 @@ void registerAkun(dataAkun data, int &jumlahAkun, string username, string passwo
 		jumlahAkun++;
 	}
 }
-void beliGame(dataGame datagame[], string username, int &jumlahBeli, int &nomorakun, dataAkun akun)
+void beliGame(dataGame datagame[], dataGame game[], string username, int &jumlahBeli, int &nomorakun, dataAkun akun)
 {
 	string belilain, topup;
 	int kodegame;
 	do
 	{
-		int jumlahGame = 0, i = 0;
+		int jumlahGame = 0, i = 0, j = 0;
 		cout << "Masukkan Kode Game : ";
 		cin >> kodegame;
 
@@ -559,17 +551,51 @@ void beliGame(dataGame datagame[], string username, int &jumlahBeli, int &nomora
 				i++;
 			}
 			ifs.close();
-			jumlahGame += i - 1;
-			bool found = false;
-			for (i = 0; i < jumlahGame; i++)
+		}
+		jumlahGame += i - 1;
+		bool found = false;
+		bool found2 = false;
+		for (i = 0; i < jumlahGame; i++)
+		{
+			if (kodegame == datagame[i].kode)
 			{
-				if (kodegame == datagame[i].kode)
+				found = true;
+				break;
+			}
+		}
+		if (found == true && (akun.saldo - datagame[i].harga > 0))
+		{
+			string namaFile = username + "-Game.txt";
+			ifstream ifs(namaFile);
+			if (ifs.is_open())
+			{
+				while (!ifs.eof())
 				{
-					found = true;
-					break;
+					ifs >> game[j].kode;
+					ifs >> game[j].nama;
+					ifs >> game[j].genre;
+					ifs >> game[j].developer;
+					ifs >> game[j].tanggalRilis;
+					ifs >> game[j].harga;
+					j++;
+				}
+				for (j = 0; j < jumlahGame; j++)
+				{
+					if (game[j].kode == kodegame)
+					{
+						found2 = true;
+						break;
+					}
+					ifs.close();
 				}
 			}
-			if (found == true && (akun.saldo - datagame[i].harga > 0))
+			else
+				found2 = false;
+			if (found2)
+			{
+				cout << "\nGame Sudah Ada Di Library" << endl;
+			}
+			else
 			{
 				cout << "\nPembelian Berhasil" << endl;
 				cout << "Nama Game\t: " << replaceUnderscore(datagame[i].nama) << endl;
@@ -594,37 +620,43 @@ void beliGame(dataGame datagame[], string username, int &jumlahBeli, int &nomora
 						 << akun.saldo - datagame[i].harga << endl;
 					ofs2.close();
 				}
-				cout << "Lakukan Pembelian lain?(y/n) : ";
-				cin >> belilain;
-				if (belilain == "y")
+				ifstream ifs(namaFile2);
+				if (ifs.is_open())
 				{
-					jumlahBeli++;
-					belilain = "y";
-				}
-				else
-				{
-					belilain = "n";
+					ifs >> akun.username >> akun.password >> akun.saldo;
+					ifs.close();
 				}
 			}
-			else if (found == true && (akun.saldo - datagame[i].harga <= 0))
+			cout << "Lakukan Pembelian lain?(y/n) : ";
+			cin >> belilain;
+			if (belilain == "y")
 			{
-				cout << "\nSaldo Anda Tidak Cukup" << endl;
-				cout << "Apakah Anda Ingin Top Up Saldo?(y/n) : ";
-				cin >> topup;
-				if (topup == "y")
-				{
-					belilain = "n";
-					system("cls");
-					tambahSaldo(akun, username);
-				}
-				else
-					belilain = "n";
+				jumlahBeli++;
+				belilain = "y";
 			}
 			else
 			{
-				cout << "\nKode Game Tidak Ditemukan" << endl;
 				belilain = "n";
 			}
+		}
+		else if (found == true && (akun.saldo - datagame[i].harga <= 0))
+		{
+			cout << "\nSaldo Anda Tidak Cukup" << endl;
+			cout << "Apakah Anda Ingin Top Up Saldo?(y/n) : ";
+			cin >> topup;
+			if (topup == "y")
+			{
+				belilain = "n";
+				system("cls");
+				tambahSaldo(akun, username);
+			}
+			else
+				belilain = "n";
+		}
+		else
+		{
+			cout << "\nKode Game Tidak Ditemukan" << endl;
+			belilain = "n";
 		}
 	} while (belilain == "y");
 }

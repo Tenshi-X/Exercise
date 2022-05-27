@@ -40,6 +40,7 @@ int main()
 
 	do
 	{
+		//Menu Awal
 		cout << "1. Login" << endl;
 		cout << "2. Register" << endl;
 		cout << "3. Menu Developer" << endl;
@@ -48,6 +49,7 @@ int main()
 		cin >> pilih1;
 		cin.ignore();
 		system("cls");
+		//Pengecekan Menu Awal
 		if (pilih1 == 1)
 		{
 			int jumlahGagal = 0, i = 0;
@@ -57,6 +59,7 @@ int main()
 			cout << "Masukkan password : ";
 			getline(cin, password);
 			nomorAkun = 0;
+			//Pengecekan Username dan Password
 			string namaFile = username + ".txt";
 			ifstream ifs(namaFile);
 			if (ifs.is_open())
@@ -86,7 +89,7 @@ int main()
 						ifs >> akun.username >> akun.password >> akun.saldo;
 						ifs.close();
 					}
-
+					//Menu User
 					cout << "Hello, " << akun.username << endl;
 					cout << "Jumlah Saldo Anda : " << akun.saldo << endl;
 					cout << "\n1. Game Saya" << endl;
@@ -96,15 +99,18 @@ int main()
 					cout << "Pilih : ";
 					cin >> pilih3;
 					system("cls");
+					//Pengecekan Menu User
 					if (pilih3 == 1)
 					{
-						libraryGame(game, username, i);
+						//Menu Game Saya
+						libraryGame(game, username, i); //Menampilkan Game Yang Telah Dibeli
 						cout << "Kembali?(y/n) : ";
 						cin >> menulogin;
 						system("cls");
 					}
 					else if (pilih3 == 2)
 					{
+						//Menu Beli Game
 						dataGame temporary;
 						ifstream ifs("dataGame.txt");
 						int jumlahGame = 0;
@@ -119,6 +125,7 @@ int main()
 							jumlahGame += i - 1;
 							ifs.close();
 						}
+						//Menampilkan Data Game
 						cout << setfill('-') << setw(115) << "-" << endl;
 						cout << left << "|" << setfill(' ') << setw(16) << " Kode Game"
 							 << "|" << setfill(' ') << setw(23);
@@ -138,7 +145,7 @@ int main()
 							cout << "| " << setfill(' ') << setw(18) << tempGame[i].tanggalRilis << "| " << setfill(' ') << setw(17) << tempGame[i].harga << endl;
 						}
 						cout << setfill('-') << setw(115) << "-" << endl;
-
+						//Menu Pilihan Beli Game
 						cout << "1. Cari Game Berdasarkan Nama" << endl;
 						cout << "2. Urutkan Game Berdasarkan Harga Termurah" << endl;
 						cout << "3. Urutkan Game Berdasarkan Harga Termahal" << endl;
@@ -146,17 +153,19 @@ int main()
 						cout << "Pilih : ";
 						cin >> pilih4;
 						cin.ignore();
-
+						//Pengecekan Menu Pilihan Beli Game
 						if (pilih4 == 1)
 						{
+							//Menu Cari Game Berdasarkan Nama
 							int i = 0;
 							string cariNama;
 							cout << "Masukkan nama game : ";
 							getline(cin, cariNama);
 							bool pencarian = false;
+							//Pengecekan Nama Game
 							for (int i = 0; i < jumlahGame; i++)
 							{
-								if (replaceSpasi(cariNama) == replaceSpasi(tempGame[i].nama))
+								if (replaceSpasi(cariNama) == replaceSpasi(tempGame[i].nama)) //Fungsi Untuk Mengganti Spasi Dengan Underscore Pada String
 								{
 									pencarian = true;
 									break;
@@ -164,8 +173,9 @@ int main()
 							}
 							if (pencarian)
 							{
+								//Menampilkan Data Game Yang Dicari
 								cout << "Kode\t\t: " << tempGame[i].kode << endl
-									 << "Nama\t\t: " << replaceUnderscore(tempGame[i].nama) << endl
+									 << "Nama\t\t: " << replaceUnderscore(tempGame[i].nama) << endl //Fungsi Untuk Mengganti Underscore Dengan Spasi Pada String
 									 << "Genre\t\t: " << tempGame[i].genre << endl
 									 << "Developer\t: " << tempGame[i].developer << endl
 									 << "Tanggal Rilis\t: " << tempGame[i].tanggalRilis << endl
@@ -175,7 +185,7 @@ int main()
 								if (beligame == "y")
 								{
 									banyakBeli++;
-									beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun);
+									beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun); //Fungsi Beli Game
 								}
 								else
 								{
@@ -189,6 +199,7 @@ int main()
 						}
 						else if (pilih4 == 2)
 						{
+							//Menu Urutkan Game Berdasarkan Harga Termurah
 							for (int i = 0; i < jumlahGame - 1; i++)
 							{
 								for (int j = 0; j < jumlahGame - 1 - i; j++)
@@ -200,7 +211,7 @@ int main()
 										tempGame[j + 1] = temporary;
 									}
 								}
-							}
+							} //Code Sorting Mencari Harga Termurah
 							cout << setfill('-') << setw(115) << "-" << endl;
 							cout << left << "|" << setfill(' ') << setw(16) << " Kode Game"
 								 << "|" << setfill(' ') << setw(23);
@@ -225,7 +236,7 @@ int main()
 							if (beligame == "y")
 							{
 								banyakBeli++;
-								beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun);
+								beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun); //Fungsi Beli Game
 							}
 							else
 							{
@@ -234,6 +245,7 @@ int main()
 						}
 						else if (pilih4 == 3)
 						{
+							//Menu Urutkan Game Berdasarkan Harga Termahal
 							for (int i = 0; i < jumlahGame - 1; i++)
 							{
 								for (int j = 0; j < jumlahGame - 1 - i; j++)
@@ -245,7 +257,7 @@ int main()
 										tempGame[j + 1] = temporary;
 									}
 								}
-							}
+							}//Code Sorting Mencari Harga Termahal
 							cout << setfill('-') << setw(115) << "-" << endl;
 							cout << left << "|" << setfill(' ') << setw(16) << " Kode Game"
 								 << "|" << setfill(' ') << setw(23);
@@ -270,7 +282,7 @@ int main()
 							if (beligame == "y")
 							{
 								banyakBeli++;
-								beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun);
+								beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun); //Fungsi Beli Game
 							}
 							else
 							{
@@ -280,7 +292,7 @@ int main()
 						else if (pilih4 == 4)
 						{
 							banyakBeli++;
-							beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun);
+							beliGame(tempGame, gameSaya, username, banyakBeli, nomorAkun, akun); //Fungsi Beli Game
 						}
 						else
 						{
@@ -292,7 +304,7 @@ int main()
 					}
 					else if (pilih3 == 3)
 					{
-						tambahSaldo(akun, username);
+						tambahSaldo(akun, username); //Fungsi Tambah Saldo
 						cout << "Kembali?(y/n) : ";
 						cin >> menulogin;
 						system("cls");
@@ -316,7 +328,7 @@ int main()
 		}
 		else if (pilih1 == 2)
 		{
-			registerAkun(akun, banyakAkun, username, password);
+			registerAkun(akun, banyakAkun, username, password); //Fungsi Untuk Menambahkan Akun
 			cout << "\nKembali ke Menu Awal?(y/n) ";
 			cin >> menuAwal;
 			if (menuAwal == "y" || menuAwal == "Y")
@@ -331,6 +343,7 @@ int main()
 		}
 		else if (pilih1 == 3)
 		{
+			//Menu Developer
 			cout << "1. Masukkan data game" << endl;
 			cout << "2. Tampilkan data game" << endl;
 			cout << "3. Kembali ke Menu Awal" << endl;
@@ -339,7 +352,7 @@ int main()
 			system("cls");
 			if (pilih2 == 1)
 			{
-				inputGame(game, banyakMasukan);
+				inputGame(game, banyakMasukan); //Fungsi Untuk Menambahkan Game
 				cout << "\nKembali ke Menu Awal?(y/n) ";
 				cin >> menuAwal;
 				if (menuAwal == "y" || menuAwal == "Y")
@@ -354,7 +367,7 @@ int main()
 
 			else if (pilih2 == 2)
 			{
-				outputGame(tempGame, banyakMasukan);
+				outputGame(tempGame, banyakMasukan); //Fungsi Untuk Menampilkan Game
 				cout << "\nKembali ke Menu Awal?(y/n) ";
 				cin >> menuAwal;
 				if (menuAwal == "y" || menuAwal == "Y")
@@ -641,7 +654,7 @@ void beliGame(dataGame datagame[], dataGame game[], string username, int &jumlah
 			}
 			else
 			{
-				cout << "Total Harga : " << totalHarga(harga, totalGame) << endl;
+				cout << "Total Harga : " << totalHarga(harga, totalGame) << endl; //Menampilkan Total Harga Pembelian
 				belilain = "n";
 			}
 		}

@@ -27,6 +27,7 @@ void registerAkun(dataAkun data, int &jumlahAkun, string username, string passwo
 void beliGame(dataGame datagame[], dataGame game[], string username, int &jumlahBeli, int &nomorakun, dataAkun akun);
 void tambahSaldo(dataAkun dataakun, string username);
 void libraryGame(dataGame game[], string username, int i);
+int totalHarga(int harga[], int jumlahBeli);
 
 int main()
 {
@@ -529,6 +530,7 @@ void registerAkun(dataAkun data, int &jumlahAkun, string username, string passwo
 }
 void beliGame(dataGame datagame[], dataGame game[], string username, int &jumlahBeli, int &nomorakun, dataAkun akun)
 {
+	int harga[100], totalGame = 1;
 	string belilain, topup;
 	int kodegame;
 	do
@@ -594,6 +596,7 @@ void beliGame(dataGame datagame[], dataGame game[], string username, int &jumlah
 			if (found2)
 			{
 				cout << "\nGame Sudah Ada Di Library" << endl;
+				totalGame--;
 			}
 			else
 			{
@@ -626,20 +629,23 @@ void beliGame(dataGame datagame[], dataGame game[], string username, int &jumlah
 					ifs >> akun.username >> akun.password >> akun.saldo;
 					ifs.close();
 				}
+				harga[totalGame - 1] = datagame[i].harga;
 			}
 			cout << "Lakukan Pembelian lain?(y/n) : ";
 			cin >> belilain;
 			if (belilain == "y")
 			{
+				totalGame++;
 				jumlahBeli++;
 				belilain = "y";
 			}
 			else
 			{
+				cout << "Total Harga : " << totalHarga(harga, totalGame) << endl;
 				belilain = "n";
 			}
 		}
-		else if (found == true && (akun.saldo - datagame[i].harga <= 0))
+		else if (found == true && (akun.saldo - datagame[i].harga < 0))
 		{
 			cout << "\nSaldo Anda Tidak Cukup" << endl;
 			cout << "Apakah Anda Ingin Top Up Saldo?(y/n) : ";
@@ -702,4 +708,15 @@ void libraryGame(dataGame game[], string username, int i)
 	}
 	else
 		cout << "Anda belum memiliki game" << endl;
+}
+int totalHarga(int harga[], int jumlahBeli)
+{
+	if (jumlahBeli <= 1)
+	{
+		return harga[jumlahBeli - 1];
+	}
+	else
+	{
+		return harga[jumlahBeli - 1] + (totalHarga(harga, jumlahBeli - 1));
+	}
 }
